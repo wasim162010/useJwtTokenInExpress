@@ -53,6 +53,8 @@ app.post('/login', function(req, res) {
       },
     });
 
+    } else {
+        res.status(401).json({success:false, message: "Invalid user"});
     }
 
 });
